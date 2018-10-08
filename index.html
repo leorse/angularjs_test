@@ -1,0 +1,40 @@
+<!doctype <!DOCTYPE html>
+<html ng-app="debut">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div ng-controller="MainController">
+        <div ng-view></div>
+
+        <pre>$location.path() = {{$location.path()}}</pre>
+
+        {{users2|filter:{content:query2} }}
+
+        <div>
+            <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name">
+            <hr>
+            <h1>Salut {{yourName}}</h1>
+            <hr>
+            <input type="text" ng-model="val1">
+            <input type="text" ng-model="val2">
+            Résultat:{{val2*1+val1*1}}
+
+        </div>
+
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/code.js"></script>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<div ng-controller="CmtController">
+    <input type="text" ng-model="query">
+    <div ng-init="users=['poi','iop','moi','nio']">
+        <ul>
+            <li ng-repeat="user in users">{{user| uppercase}}</li>
+        </ul>
+    </div>
+    {{users|filter:query}}
+
+    <select ng-model="order">
+        <option value="+username">Par nom</option>
+        <option value="+content">Par content</option>
+    </select>
+    <input type="text" ng-model="query2">
+
+    <div ng-repeat="comment in comments | orderBy:order">
+        <p>
+            <strong>{{comment.username| uppercase}}</strong><br>
+            {{comment.content}}
+        </p>
+    </div>
+</div>
