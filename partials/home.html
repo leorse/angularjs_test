@@ -1,7 +1,11 @@
-<h1>ICI</h1>
+<div ng-repeat="post in posts">
+<h1>{{post.name}}</h1>
 
-<p>orem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut convallis ex. Nunc ut dignissim ligula. Quisque porta elit eu urna pulvinar convallis. Vivamus vel lacus consequat, porta risus eu, iaculis eros. Aenean sagittis mi a enim mattis pulvinar. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque vulputate suscipit egestas. Nullam accumsan luctus turpis, at euismod sem. </p>
+<p>{{post.content}}</p>
 
-<h2>Commentaires</h2>
-
-<a href="#!comments">Voir les commentaires</a>
+<h2></h2>
+<p>
+<a href="#!comments/{{post.id}}">{{post.comments.length}} commentaires</a>
+</p>
+<hr>
+</div>
