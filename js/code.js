@@ -8,7 +8,7 @@ app.controller('MainController', function($scope, $route, $routeParams, $locatio
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {templateUrl:"partials/home.html"})
-    .when("comments",{templateUrl:'partials/comments.html'})
+    .when("/comments",{templateUrl:'partials/comments.html'})
     .otherwise({redirectTo:"/"});
 });
 
